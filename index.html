@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+        body{
+            background-color: aqua;
+        }
+        .wrapper{
+            margin: auto;
+            background-color: antiquewhite;
+            text-align: center;
+
+        }
+        .wrapper .inputBox input{
+            font-size: 40px;
+            padding: 20px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <div class="inputBox">
+            <input type="text" id="input" onkeyup="multiplication()">
+        </div>
+       <h1 id="multiplicati">
+
+       </h1>
+    </div>
+    <script>
+       function multiplication(){
+        var a = document.getElementById('input').value;
+        var b = document.getElementById('multiplicati');
+        if(b.innerHTML !== '' ){
+            b.innerHTML = ''
+        }
+        else{
+            if(a == ''){
+                
+            }
+            else{
+                for(var i=1 ; i <= 12 ; i++){
+            b.innerHTML += '<h2>' + a + ' x ' + i + ' = ' + i*a + '</h2>';
+        }
+        }
+    }
+}  
+       
+
+    </script>
+</body>
+</html>
